@@ -2,7 +2,7 @@
 
 # This Python script demonstrates chain-of-thought prompting for arithmetic reasoning.
 
-# ```python
+
 import openai
 
 openai.api_key = "YOUR_API_KEY"
@@ -22,6 +22,6 @@ response = openai.Completion.create(
 )
 
 print(response.choices[0].text.strip())
-# ```
+
 
 # Replace `YOUR_API_KEY` with your actual OpenAI API key.
