@@ -1,0 +1,22 @@
+# CLU Example: Slot Filling with Rasa NLU
+
+This script demonstrates how to define a simple Rasa NLU configuration for slot filling in conversational text. Rasa NLU is a popular open-source framework for conversational AI.
+
+```yaml
+# nlu.yml (Rasa NLU training data)
+version: "3.0"
+nlu:
+- intent: book_flight
+  examples: |
+    - I want to book a flight from [New York](origin) to [Paris](destination) on [June 10th](date)
+    - Book a ticket to [London](destination) from [Berlin](origin) for [tomorrow](date)
+```
+
+You can train and test this with the Rasa CLI:
+
+```powershell
+rasa train nlu
+rasa shell nlu
+```
+
+This approach can be extended for more complex slot filling and dialogue management tasks.
